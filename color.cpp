@@ -62,16 +62,16 @@ BOOL CALLBACK WorkerProc(HWND hwnd, LPARAM lParam) {
     return TRUE;
 }
 
-GETPIXEL pGetPixel;
-HDC _hdc;
-
-TUPLEPOS value;
-COLORREF _color;
-TUPLECOLOR color;
-
 int main(int argc, char** argv)
 {
-    HINSTANCE hGDI = LoadLibrary("gdi32.dll");
+	HINSTANCE hGDI = LoadLibrary("gdi32.dll");
+
+	GETPIXEL pGetPixel;
+	HDC _hdc;
+	
+	TUPLEPOS value;
+	COLORREF _color;
+	TUPLECOLOR color;
 	
 	while (true)
 	{
