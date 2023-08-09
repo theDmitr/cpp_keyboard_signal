@@ -46,7 +46,7 @@ BOOL CALLBACK WorkerProc(HWND hwnd, LPARAM lParam) {
     static TCHAR buffer[50];
 
     GetWindowText(hwnd, buffer, 50);
-    if(_tcsstr(buffer, "Malinovka Client (SA-MP 0.3.7-R3)")) {
+    if(_tcsstr(buffer, "myWindow")) {
 		SetForegroundWindow(hwnd);
 		INPUT input;
 		input.type = INPUT_KEYBOARD;
@@ -54,7 +54,6 @@ BOOL CALLBACK WorkerProc(HWND hwnd, LPARAM lParam) {
 		input.ki.dwFlags = 0;
 		SendInput(1, &input, sizeof(INPUT));
 		Sleep(100);
-		// эмулируем отпускание клавиши "A"
 		input.ki.dwFlags = KEYEVENTF_KEYUP;
 		SendInput(1, &input, sizeof(INPUT));
 		cout << 1 << "\n";
