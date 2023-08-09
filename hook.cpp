@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 		std::cout << "Keyboard hook failed!" << std::endl;
 	}
 	
-	//HWND gameWindow = FindWindow(0, "Malinovka Game");
+	//HWND gameWindow = FindWindow(0, "myWindow");
 	while (GetMessage(NULL, NULL, 0, 0));
 	
     return 0;
